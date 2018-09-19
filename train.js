@@ -1,4 +1,76 @@
-// f git hub
+/*
+var accountSid = "PN4be96ad0a7b9b6e439ca382694f763d8";
+var authToken = "dbec63d456da69c238ade025293d54c4";
+var fromNumber = "4806668806";
+var toNumber = "7027016261";
+var text = "Please WORK!!!";
+*/
+
+
+var TwilioSMS = (function($) {
+
+  var accountSid = 'PN4be96ad0a7b9b6e439ca382694f763d8'; // replace with your account SID
+  var authToken = 'dbec63d456da69c238ade025293d54c4'; // replace with your auth token
+
+  var testEndpoint = 'https://api.twilio.com/2010-04-01/Accounts/' + accountSid + '/SMS/Messages.json';
+  var liveEndpoint = 'https://api.twilio.com/2010-04-01/Accounts/' + accountSid + '/Messages.json';
+
+  var sendMessage = function(to, from, body, successCallback, failCallback) {
+    var data = {
+      To: to,
+      From: from,
+      Body: body
+    };
+
+    $.ajax({
+      method: 'POST',
+      url: file:///Users/davidsmith/Desktop/Homework/ProjectOne/index.html,
+      //url: liveEndpoint, // uncomment this in production and comment the above line
+      data: data,
+      dataType: 'json',
+      contentType: 'application/x-www-form-urlencoded', // !
+      beforeSend: function(xhr) {
+        xhr.setRequestHeader("Authorization",
+          "Basic " + btoa(accountSid + ":" + authToken) // !
+        );
+      },
+      success: function(data) {
+        console.log("Got response: %o", data);
+
+        if (typeof successCallback == 'function')
+          successCallback(data);
+      },
+      error: function(jqXHR, textStatus, errorThrown) {
+        console.log("Request failed: " + textStatus + ", " + errorThrown);
+
+        if (typeof failCallback == 'function')
+          failCallback(jqXHR, textStatus, errorThrown);
+      }
+    });
+  }
+
+  return {
+    sendMessage: sendMessage
+  };
+
+})(jQuery);
+
+
+// USAGE
+
+TwilioSMS.sendMessage(
+  '+12345678901',
+  '+15005550006', // Twilio allowed test number
+  'Hey Jenny! Good luck on the bar exam!',
+
+  function ok() {
+    console.log("Message sent!");
+  },
+  function fail() {
+    console.log("Failed to send your message!");
+  }
+);
+
   var config = {
     apiKey: "AIzaSyDfd7IuGiABlKTH44EIiNq8q00M0axgY3Y",
     authDomain: "train-1391e.firebaseapp.com",
