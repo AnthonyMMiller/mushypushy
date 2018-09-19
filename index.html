@@ -8,37 +8,21 @@
 </head>
 <body>
         <script>
-                var randomDate = "11/28/2019";
-                var randomFormat = "MM/DD/YYYY";
-                var convertedDate = moment(randomDate, randomFormat);
             
-                // Using scripts from moment.js write code below to complete each of the following.
-                // Console.log to confirm the code changes you made worked.
-            
-                // 1 ...to convert the randomDate into three other date formats
-                console.log(moment(convertedDate).format("MM/DD/YY"));
-                console.log(moment(convertedDate).format("MMM Do, YYYY hh:mm:ss"));
-                console.log(moment(convertedDate).format("X"));
-                console.log("----------------------------------------");
-            
-                // 2 ...to determine the time in years, months, days between today and the randomDate
-                console.log(moment(convertedDate).fromNow(moment(),"days"));
-                console.log(moment(convertedDate).diff(moment(), "years"));
-                console.log(moment(convertedDate).diff(moment(), "months"));
-                console.log(moment(convertedDate).diff(moment(), "days"));
-                console.log("----------------------------------------");
-            
-                // 3 ...to determine the number of days between the randomDate and 02/14/2001
-                var newDate = moment("04/14/2020", randomFormat);
-                console.log(moment(convertedDate).diff(moment(newDate), "years"));
-            
-                // 4 ...to convert the randomDate to unix time (be sure to look up what unix time even is!!!)
-                console.log(moment(convertedDate).format("X"));
-                console.log("----------------------------------------");
-            
-                // 5 ...to determine what day of the week and what week of the year this randomDate falls on.
-                console.log(moment(convertedDate).format("ddd"));
-                console.log(moment(convertedDate).format("dddd"));
+                // -----------------------------------------------------------
+               /*  eventDateTest = "10/20/2018" */
+               // this would take the value from user input on form for date of event
+                /* var eventDate = $("#event-date-input").val().trim(); */
+                // this will return a value in milleseconds 
+               /*  moment(eventDate).diff(moment()); */
+                // this sets the above value as a variable to use in the set timeout function
+                /* var setTimeoutVar = moment(eventDate).diff(moment()); */
+                console.log("this console.log shows the setTimeoutVar value " + setTimeoutVar);
+                console.log(moment(eventDateTest).diff(moment()));
+                // the timeout function
+              /*   setTimeout(function(){
+                    our function here
+                }, setTimeoutVar); */
               </script>
             
     
