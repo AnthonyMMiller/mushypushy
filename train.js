@@ -24,8 +24,8 @@ var TwilioSMS = (function($) {
 
     $.ajax({
       method: 'POST',
-      url: file:///Users/davidsmith/Desktop/Homework/ProjectOne/index.html,
-      //url: liveEndpoint, // uncomment this in production and comment the above line
+     // url: testEndpoint,
+      url: liveEndpoint, // uncomment this in production and comment the above line
       data: data,
       dataType: 'json',
       contentType: 'application/x-www-form-urlencoded', // !
