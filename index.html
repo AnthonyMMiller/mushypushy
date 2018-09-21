@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- <html lang="en" class="full-height"> -->
+<!-- <html lang="en" class="full-height"> -->
+
 <head>
     <title>Mush Pushy</title>
 
@@ -15,15 +16,15 @@
     <!-- FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
 
-   
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-      <!-- CSS -->
-      <!-- Bootstrap core CSS -->
+    <!-- CSS -->
+    <!-- Bootstrap core CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.10/css/mdb.min.css" rel="stylesheet">
-   
+
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
 
 
@@ -32,8 +33,8 @@
 
 <body>
 
-     <!--Main Navigation-->
-     <header>
+    <!--Main Navigation-->
+    <header>
 
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
             <div class="container">
@@ -43,12 +44,12 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
-                    <ul class="navbar-nav ml-auto" >
+                    <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
                             <a class="nav-link" href="mylist.html">My Pushes</a>
                         </li>
 
-                        
+
                     </ul>
 
                 </div>
@@ -109,17 +110,17 @@
                                             </div><!-- end form-group -->
 
 
-                                            
+
                                             <div class="form-group">
 
-                                                    <div class="form-control-wrapper">
-                                                        <input type="text" id="occasion" class="form-control" placeholder="Occasion"
-                                                            data-error="Please select occasion!!!" optional>
-                                                        <div class="help-block with-errors"></div>
-                                                    </div>
-    
-    
+                                                <div class="form-control-wrapper">
+                                                    <input type="text" id="occasion" class="form-control" placeholder="Occasion"
+                                                        data-error="Please select occasion!!!" optional>
+                                                    <div class="help-block with-errors"></div>
                                                 </div>
+
+
+                                            </div>
 
 
 
@@ -138,18 +139,18 @@
 
                                             <div class="form-group">
                                                 <textarea class="form-control" rows="5" id="message" name="message"
-                                                    placeholder="Your Message" data-error="Please type your message!!!"
-                                                    required></textarea>
-                                                <div class="help-block with-errors"></div>
+                                                    placeholder="Your Message"></textarea>
+
                                             </div><!-- end form-group -->
 
 
                                             <div class="text-center">
-                                                <button class="btn btn-pink" id="first_push"><a href ="review.html">PUSHY</a></button>
+                                                <button class="btn btn-pink" id="first_push"><a href="review.html">PUSHY</a></button>
 
 
 
                                             </div>
+
                                         </form><!-- end form -->
 
                                     </div>
@@ -160,27 +161,6 @@
         </section>
 
         <!-- Intro + Form End-->
-
- <!-- Footer-->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <!-- <script src='assets/js/validator.min.js' ></script> -->
 
         <!-- Firebase Reference -->
         <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
@@ -195,8 +175,7 @@
         <!-- <script src='assets/js/script.js' ></script>  -->
         <!-- JQuery -->
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
 
         <!-- Bootstrap tooltips -->
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
@@ -204,10 +183,48 @@
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
         <!-- MDB core JavaScript -->
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.10/js/mdb.min.js"></script>
-       
+
         <!-- Custom JavaScript -->
         <link type="text/javascript" src="assets/js/script.js">
 
+        <!-- Form Validation-->
+        <script>
+            $(function () {
+                // Rules for submisson fields
+                $("#contact-form").validate({
+                    errorClass: "errors",
+                    rules: {
+                        name: {
+                            required: true
+                        },
+                        phone: {
+                            required: true,
+                            phone: true
+                        },
+                        occasion: {
+                            required: true,
+                        },
+                        date:
+                        {
+                            required: true,
+                        },
+                        message: {
+                            required: true,
+                        }
+                    },
+                    // Setting error messages for the fields
+                    messages: {
+                        name: "Please enter a name",
+                        phone: "Please enter a valid phone number",
+                        occasion: "Please enter an occasion",
+                        message: "Please enter a message"
+                    }
+                });
+
+
+            });
+                </script>
+            <!--End form Validation-->
 </body>
 
 </html>
