@@ -33,12 +33,13 @@
 .card {
     background-color: rgba(4, 174, 239, 0.582);
     border-radius: 0 rem;
+    margin-bottom: 10rem;
 }
 
 .card-body {
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
-    padding: 2.25rem;
+  
+    padding: 2rem;
+    margin-bottom: 1rem;
 }
 
 .md-form .prefix {
@@ -105,7 +106,7 @@ a {
 }
 
 .mb-5 {
-    margin-top: 25rem !important;
+    margin-top: 23rem !important;
     margin-bottom: 0rem !important;
 }
 
@@ -136,6 +137,7 @@ a {
 .view img {
     position: relative !important;
      display: inline; 
+     
 }
 
 /* .navbar-nav {
@@ -189,6 +191,15 @@ a {
         .navbar:not(.top-nav-collapse) {
             background: rgba(90, 88, 92, 0.226)!important;
         }
+
+    
+
+}
+
+
+
+.view {
+    height: 110%;
 }
 
 
@@ -199,4 +210,19 @@ a {
 }
 
 
-.tablebox{ margin-top: 100px}
+.tablebox{ margin-top: 100px
+
+}
+
+
+.mt-box {
+    margin-top: 3rem!important;
+
+
+}
+
+@media (min-width: 600px){
+.navbar.scrolling-navbar {
+
+    padding-top: 6px;
+    padding-bottom: 6px;}}
