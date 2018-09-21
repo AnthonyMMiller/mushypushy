@@ -1,6 +1,6 @@
 <!DOCTYPE html>
+
 <html lang="en">
-<!-- <html lang="en" class="full-height"> -->
 
 <head>
     <title>Mush Pushy</title>
@@ -11,14 +11,11 @@
     <meta name="author" content="Boxdroid">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-    <link rel="icon" type="image/png" href="assets/images/fav.png" />
+    <link rel="icon" type="image/png" href="assets/images/logo.png" />
     <link rel="stylesheet" href="assets/css/reset.css" type="text/css">
     <!-- FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
 
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- CSS -->
     <!-- Bootstrap core CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
@@ -33,198 +30,258 @@
 
 <body>
 
+
     <!--Main Navigation-->
-    <header>
-
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
-            <div class="container">
-                <a class="navbar-brand mr-auto" href="index.html"><img src="assets/images/logo.png" alt="Mushy Pushy"></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7"
-                    aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="mylist.html">My Pushes</a>
-                        </li>
 
 
-                    </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+        <div class="container">
+            <a class="navbar-brand mr-auto" href="index.html"><img src="assets/images/logo.png" alt="Mushy Pushy"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">ABOUT MUSHY PUSHY</a>
+                    </li>
 
-                </div>
+
+                </ul>
+
             </div>
-        </nav>
+        </div>
+    </nav>
 
-        <!--Main Navigation End-->
-
-
-        <!--Main Intro Section + Form-->
-        <section class="view intro gradient" id="main_form">
-            <div class="full-bg-img">
-                <div class="container flex-center">
-                    <div class="d-flex align-items-center content-height">
-                        <div class="row flex-center pt-5 mt-box">
-                            <div class="col-md-6 text-center text-md-left mb-5">
-                                <div class="white-text">
-                                    <h1 class="h1-responsive font-weight-bold">
-
-                                        Stop forgetting important days of people you love…
-                                    </h1>
-
-                                    <br>
-
-                                </div>
-                            </div>
-
-                            <div class="col-md-6 col-xl-5 offset-xl-1">
-                                <!--Form-->
-                                <div class="card wow fadeInRight">
-
-
-                                    <div class="card-body">
-                                        <!--Header-->
-                                        <div class="text-center">
-                                            <h4 class="white-text h3-responsive font-weight-bold"> Start Mushy Alert</h4>
-                                            <hr class="hr-light mb-3 mt-4">
-                                        </div>
-
-                                        <form id="contact-form" data-toggle="validator">
-
-
-                                            <div class="form-group">
-                                                <input type="text" class="form-control" id="name" name="name"
-                                                    placeholder="Receipient's Name or Nick Name" data-error="Please type name!!!"
-                                                    required>
-                                                <div class="help-block with-errors"></div>
-                                            </div><!-- end form-group -->
+    <!--Main Navigation End-->
 
 
 
-                                            <div class="form-group">
-                                                <input type="tel" class="form-control" id="phone" name="phone"
-                                                    placeholder="Receipient's Phone Number" data-error="Phone Number is invalid"
-                                                    required>
-                                                <hr class="hr-light mb-3 mt-4">
-                                                <div class="help-block with-errors"></div>
-                                            </div><!-- end form-group -->
+    <!--Main Intro Section + Form-->
+    <section class="intro gredient full-bg-img">
+
+
+        <div class="container flex-center">
+
+            <form id="main_form">
+
+                <div class="row flex-center mt-3 pt-3">
 
 
 
-                                            <div class="form-group">
-
-                                                <div class="form-control-wrapper">
-                                                    <input type="text" id="occasion" class="form-control" placeholder="Occasion"
-                                                        data-error="Please select occasion!!!" optional>
-                                                    <div class="help-block with-errors"></div>
-                                                </div>
-
-
-                                            </div>
+                    <div class="col-md-12 text-center pb-5 mb-5 ">
+                        <h1 class="h1-responsive white-text font-weight-bold">
+                            Stop forgetting <br />important days of people you love…
+                        </h1>
+                    </div>
 
 
 
-                                            <div class="form-group">
-
-                                                <div class="form-control-wrapper">
-                                                    <input type="text" id="date" class="form-control" placeholder="Month | Date | Year"
-                                                        data-error="Please select date!!!" required>
-                                                    <div class="help-block with-errors"></div>
-                                                </div>
-
-
-                                            </div>
-
-
-
-                                            <div class="form-group">
-                                                <textarea class="form-control" rows="5" id="message" name="message"
-                                                    placeholder="Your Message"></textarea>
-
-                                            </div><!-- end form-group -->
-
-
-                                            <div class="text-center">
-                                                <button class="btn btn-pink" id="first_push"><a href="review.html">PUSHY</a></button>
-
-
-
-                                            </div>
-
-                                        </form><!-- end form -->
-
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Receipient's Name or Nick Name"
+                                data-error="Please type name!!!" required>
+                            <div class="help-block with-errors"></div>
                         </div>
                     </div>
-        </section>
 
-        <!-- Intro + Form End-->
 
-        <!-- Firebase Reference -->
-        <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
 
-        <!-- Moment.js Reference -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input type="tel" class="form-control" id="phone" name="phone" placeholder="Receipient's Phone Number"
+                                data-error="Phone Number is invalid" required>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
 
-        <!-- JS -->
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-        <!-- <script src='assets/js/script.js' ></script>  -->
-        <!-- JQuery -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
 
-        <!-- Bootstrap tooltips -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
-        <!-- Bootstrap core JavaScript -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
-        <!-- MDB core JavaScript -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.10/js/mdb.min.js"></script>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input type="text" id="date" class="form-control" placeholder="Month | Date | Year"
+                                data-error="Please select date!!!" required>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
 
-        <!-- Custom JavaScript -->
-        <link type="text/javascript" src="assets/js/script.js">
 
-        <!-- Form Validation-->
-        <script>
-            $(function () {
-                // Rules for submisson fields
-                $("#contact-form").validate({
-                    errorClass: "errors",
-                    rules: {
-                        name: {
-                            required: true
-                        },
-                        phone: {
-                            required: true,
-                            phone: true
-                        },
-                        occasion: {
-                            required: true,
-                        },
-                        date:
-                        {
-                            required: true,
-                        },
-                        message: {
-                            required: true,
-                        }
+
+                    <div class="col-md-12">
+                        <textarea class="form-control " rows="3" id="message" name="message" placeholder="Your Message"
+                            data-error="Please type your message!!!" required></textarea>
+
+                        <div class="help-block with-errors"></div>
+                    </div>
+
+                    <div class="col-md-12 text-center  pt-3 pb-5">
+                        <button class="btn btn-purple2" id="confirm_push"> Mushy Pushy </button>
+                    </div>
+
+
+
+                    <!--Pushed Messages-->
+
+
+
+                    <div class="col-md-12" id="Pushed_Message">
+
+
+
+                        <div class="card-body">
+
+                            <h4 class="h3-responsive font-weight-bold text-center"> Pushed Messages<br />&nbsp;</h4>
+
+                            <table class="table table-striped table-responsive-md btn-table">
+
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Joe</th>
+
+                                        <td class="col-md-4">
+                                            <p>afasdfasdfasdfsadfsadfasdfafd
+                                                afasdfasdfasdfsadfsadfasdfafdafasdfasdfasdfsadfsadfasdfafdafasdfasdfasdfsadfsadfasdfafdafasdfasdfasdfsadfsadfasdfafdafasdfasdfasdfsadfsadfasdfafdafasdfasdfasdfsadfsadfasdfafdafasdfasdfasdfsadfsadfasdfafdafasdfasdfasdfsadfsadfasdfafdafasdfasdfasdfsadfsadfasdfafdafasdfasdfasdfsadfsadfasdfafafd</p>
+                                        </td>
+
+
+                                        <td>
+                                            <button type="button" class="btn btn-delete btn-sm m-0 waves-effect">Delete</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Joe</th>
+
+                                        <td class="col-md-4">
+                                            <p>afasdfasdfasdfsadfsadfasdfafd
+                                                afasdfasdfasdfsadfsadfasdfafdafasdfasdfasdfsadfsadfasdfafdafasdfasdfasdfsadfsadfasdfafdafasdfasdfasdfsadfsadfasdfafdafasdfasdfasdfsadfsadfasdfafdafasdfasdfasdfsadfsadfasdfafdafasdfasdfasdfsadfsadfasdfafdafasdfasdfasdfsadfsadfasdfafdafasdfasdfasdfsadfsadfasdfafdafasdfasdfasdfsadfsadfasdfafafd</p>
+                                        </td>
+
+
+                                        <td>
+                                            <button type="button" class="btn btn-delete btn-sm m-0 waves-effect">Delete</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Joe</th>
+
+
+                                        <td class="col-md-4">
+                                            <p>afasdfasdfasdfsadfsadfasdfafd
+                                                afasdfasdfasdfsadfsadfasdfafdafasdfasdfasdfsadfsadfasdfafdafasdfasdfasdfsadfsadfasdfafdafasdfasdfasdfsadfsadfasdfafdafasdfasdfasdfsadfsadfasdfafdafasdfasdfasdfsadfsadfasdfafdafasdfasdfasdfsadfsadfasdfafdafasdfasdfasdfsadfsadfasdfafdafasdfasdfasdfsadfsadfasdfafdafasdfasdfasdfsadfsadfasdfafafd</p>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn btn-delete btn-sm m-0 waves-effect">Delete</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Joe</th>
+
+
+                                        <td class="col-md-4">
+                                            <p>afasdfasdfasdfsadfsadfasdfafd
+                                                afasdfasdfasdfsadfsadfasdfafdafasdfasdfasdfsadfsadfasdfafdafasdfasdfasdfsadfsadfasdfafdafasdfasdfasdfsadfsadfasdfafdafasdfasdfasdfsadfsadfasdfafdafasdfasdfasdfsadfsadfasdfafdafasdfasdfasdfsadfsadfasdfafdafasdfasdfasdfsadfsadfasdfafdafasdfasdfasdfsadfsadfasdfafdafasdfasdfasdfsadfsadfasdfafafd</p>
+                                        </td>
+
+                                        <td>
+                                            <button type="button" class="btn btn-delete btn-sm m-0 waves-effect">Delete</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Joe</th>
+
+
+                                        <td class="col-md-4">
+                                            <p>afasdfasdfasdfsadfsadfasdfafd
+                                                afasdfasdfasdfsadfsadfasdfafdafasdfasdfasdfsadfsadfasdfafdafasdfasdfasdfsadfsadfasdfafdafasdfasdfasdfsadfsadfasdfafdafasdfasdfasdfsadfsadfasdfafdafasdfasdfasdfsadfsadfasdfafdafasdfasdfasdfsadfsadfasdfafdafasdfasdfasdfsadfsadfasdfafdafasdfasdfasdfsadfsadfasdfafdafasdfasdfasdfsadfsadfasdfafafd</p>
+                                        </td>
+
+                                        <td>
+                                            <button type="button" class="btn btn-delete btn-sm m-0 waves-effect">Delete</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+
+                            </table>
+
+                        </div>
+                    </div>
+
+
+                    <!-- Pushed Messages-->
+
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+
+
+    <!-- Firebase Reference -->
+    <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
+
+    <!-- Moment.js Reference -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+
+    <!-- JS -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- <script src='assets/js/script.js' ></script>  -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+    <!-- date picker -->
+
+
+
+    <!-- Custom JavaScript -->
+    <link type="text/javascript" src="assets/js/script.js">
+
+    <!-- Form Validation-->
+    <script>
+        $(function () {
+            // Rules for submisson fields
+            $("#main_form").validate({
+                errorClass: "errors",
+                rules: {
+                    name: {
+                        required: true
                     },
-                    // Setting error messages for the fields
-                    messages: {
-                        name: "Please enter a name",
-                        phone: "Please enter a valid phone number",
-                        occasion: "Please enter an occasion",
-                        message: "Please enter a message"
+                    phone: {
+                        required: true,
+                        phone: true
+                    },
+                    occasion: {
+                        required: true,
+                    },
+                    date:
+                    {
+                        required: true,
+                    },
+                    message: {
+                        required: true,
                     }
-                });
-
-
+                },
+                // Setting error messages for the fields
+                messages: {
+                    name: "Please enter a name",
+                    phone: "Please enter a valid phone number",
+                    occasion: "Please enter an occasion",
+                    message: "Please enter a message"
+                }
             });
-                </script>
-            <!--End form Validation-->
+
+
+        });
+    </script>
+    <!--End form Validation-->
+
 </body>
 
 </html>
