@@ -58,7 +58,7 @@ $(document).ready(function () {
        // this sets the above value as a variable to use in the set timeout function
        var setTimeoutVar = moment(eventDate).diff(moment());
        console.log("this console.log shows the setTimeoutVar value " + setTimeoutVar);
-       console.log(moment(eventDateTest).diff(moment()));
+       console.log(moment(eventDate).diff(moment()));
        // the timeout function
        setTimeout(function () {
            TwilioSMS.sendMessage(
@@ -127,9 +127,16 @@ $(document).ready(function () {
        
         // Create the new row
         var newRow = $("<tr>").append(
-            $("<td>").text(userMessage)
+            $("<th>").text(name),
+            $("<td>").text(userMessage),
+            $("<td>").html("<button class='btn btn-delete btn-sm m-0 waves-effect btn-remove'>Delete</button>")
+            
         );
         // Append the new row to the table
         $(".table > tbody").append(newRow);
+    });
+
+    $(document).on("click",".btn-remove",function(){
+        $(this).parent().parent().remove();
     });
 });
