@@ -102,8 +102,10 @@ $(document).ready(function () {
             userMessage: userMessage,
         };
         // Uploads pushy data to the database
-        database.ref().push(newPushy);
+        var newRef = database.ref().push(newPushy);
+        var key = newRef.key;
         // Logs everything to console
+        console.log(key);
         console.log(newPushy.name);
         console.log(newPushy.recepientNumber);
         console.log(newPushy.eventDate);
@@ -118,6 +120,8 @@ $(document).ready(function () {
     // 3. Create Firebase event for adding employee to the database and a row in the html when a user adds an entry
     database.ref().on("child_added", function (childSnapshot) {
         console.log(childSnapshot.val());
+        var snapshotKey = childSnapshot.key;
+        console.log(childSnapshot.key);
         // Store everything into a variable.
         var name = childSnapshot.val().name;
         var recepientNumber = childSnapshot.val().recepientNumber;
@@ -127,16 +131,28 @@ $(document).ready(function () {
        
         // Create the new row
         var newRow = $("<tr>").append(
+           
             $("<th>").text(name),
             $("<td>").text(userMessage),
-            $("<td>").html("<button class='btn btn-delete btn-sm m-0 waves-effect btn-remove'>Delete</button>")
+            $("<td>").text(recepientNumber),
+            $("<td>").html(`<button class='btn btn-delete btn-sm m-0 waves-effect btn-remove key-btn float-right' data-key=${snapshotKey}>Delete</button>`),
+           
             
         );
         // Append the new row to the table
         $(".table > tbody").append(newRow);
+        $(document).on("click",".btn-remove",function(){
+            
+            var key = $(this).attr("data-key");
+            console.log(key)
+            $(this).parent().parent().remove();
+            var dbRef = database.ref(key);
+            console.log(dbRef); 
+            dbRef.remove();
+            
+            
+        });
     });
-
-    $(document).on("click",".btn-remove",function(){
-        $(this).parent().parent().remove();
-    });
+ 
+    
 });
