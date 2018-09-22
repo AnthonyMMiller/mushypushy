@@ -12,6 +12,7 @@ $(document).ready(function () {
                 From: from,
                 Body: body
             };
+            // ajax call 
             $.ajax({
                 method: 'POST',
                 url: liveEndpoint,
@@ -40,20 +41,24 @@ $(document).ready(function () {
         };
     })(jQuery);
     $("#confirm_push").on("click", function () {
+        event.preventDefault();
           // THIS IS THE MOMENT.JS CODE
         
       // this would take the value from user input on form for date of event
       var eventDate = $("#date").val().trim();
+      console.log(eventDate);
        // this will return a value in milleseconds 
        moment(eventDate).diff(moment());
        // variable that places the person's number to recieve the message
        var recepientNumber = $("#phone").val().trim();
+       console.log(recepientNumber);
        // variable that retrieves user message and sets it
        var userMessage = $("#message").val().trim();
+       console.log(userMessage);
        // this sets the above value as a variable to use in the set timeout function
        var setTimeoutVar = moment(eventDate).diff(moment());
        console.log("this console.log shows the setTimeoutVar value " + setTimeoutVar);
-       console.log(moment(eventDateTest).diff(moment()));
+       console.log(moment(eventDate).diff(moment()));
        // the timeout function
        setTimeout(function () {
            TwilioSMS.sendMessage(
@@ -122,9 +127,16 @@ $(document).ready(function () {
        
         // Create the new row
         var newRow = $("<tr>").append(
-            $("<td>").text(userMessage)
+            $("<th>").text(name),
+            $("<td>").text(userMessage),
+            $("<td>").html("<button class='btn btn-delete btn-sm m-0 waves-effect btn-remove'>Delete</button>")
+            
         );
         // Append the new row to the table
         $(".table > tbody").append(newRow);
+    });
+
+    $(document).on("click",".btn-remove",function(){
+        $(this).parent().parent().remove();
     });
 });
