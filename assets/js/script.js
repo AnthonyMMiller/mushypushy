@@ -47,22 +47,27 @@ $(document).ready(function () {
       // this would take the value from user input on form for date of event
       var eventDate = $("#date").val().trim();
       console.log(eventDate);
-       // this will return a value in milleseconds 
-       moment(eventDate).diff(moment());
-       // variable that places the person's number to recieve the message
+      var format = "MM/DD/YYYY";
+      var convertedDate = moment(eventDate, format);
+       //var eventTestDate = 5000;
+       //variable that places the person's number to recieve the message
        var recepientNumber = $("#phone").val().trim();
+       //var recepientNumber = "+15205762500";
        console.log(recepientNumber);
        // variable that retrieves user message and sets it
        var userMessage = $("#message").val().trim();
        console.log(userMessage);
        // this sets the above value as a variable to use in the set timeout function
-       var setTimeoutVar = moment(eventDate).diff(moment());
+       var setTimeoutVar = moment(convertedDate).diff(moment(), "milliseconds");
+      
        console.log("this console.log shows the setTimeoutVar value " + setTimeoutVar);
-       console.log(moment(eventDate).diff(moment()));
+       //console.log(moment(eventTestDate).diff(moment()));
        // the timeout function
        setTimeout(function () {
            TwilioSMS.sendMessage(
-               ("+" + recepientNumber), // going to be user input number stored in a variable
+               recepientNumber, // going to be user input number stored in a variable
+               
+               
                '+17029197457', // Twilio allowed test number
                userMessage, // going to be a user input message stored in a variable
                function ok() {
@@ -134,7 +139,6 @@ $(document).ready(function () {
            
             $("<th>").text(name),
             $("<td>").text(userMessage),
-            $("<td>").text(recepientNumber),
             $("<td>").html(`<button class='btn btn-delete btn-sm m-0 waves-effect btn-remove key-btn float-right' data-key=${snapshotKey}>Delete</button>`),
            
             
@@ -144,7 +148,7 @@ $(document).ready(function () {
         $(document).on("click",".btn-remove",function(){
             
             var key = $(this).attr("data-key");
-            console.log(key)
+            console.log(key);
             $(this).parent().parent().remove();
             var dbRef = database.ref(key);
             console.log(dbRef); 
