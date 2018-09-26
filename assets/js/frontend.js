@@ -21,17 +21,16 @@ function hideList(){
 
 /*----------------- Form Validation-------------- */
 
-    $(function () {
+  
         // Rules for submisson fields
         $("#main_form").validate({
             errorClass: "errors",
             rules: {
                 name: {
-                    required: true
+                    required: true,
                 },
                 phone: {
                     required: true,
-                    phone: true
                 },
                 occasion: {
                     required: true,
@@ -54,7 +53,7 @@ function hideList(){
         });
 
 
-    });
+
 
     /*-------------End form Validation--------------*/
 
