@@ -2,8 +2,8 @@ $(document).ready(function () {
    
     // Twilio module
     var TwilioSMS = (function ($) {
-        var accountSid = 'ACe2465b3e5688360848d8c4597480e6fd';
-        var authToken = 'dbec63d456da69c238ade025293d54c4';
+        var accountSid = 'AC9687ac728e15764dabb7d44361d8f722';
+        var authToken = 'f851ee33ba0e520694196f328948ffda';
         var testEndpoint = 'https://api.twilio.com/2010-04-01/Accounts/' + accountSid + '/SMS/Messages.json';
         var liveEndpoint = 'https://api.twilio.com/2010-04-01/Accounts/' + accountSid + '/Messages.json';
         var sendMessage = function (to, from, body, successCallback, failCallback) {
@@ -68,7 +68,7 @@ $(document).ready(function () {
                recepientNumber, // going to be user input number stored in a variable
                
                
-               '+17029197457', // Twilio allowed test number
+               '+14804051263', // Twilio allowed test number
                userMessage, // going to be a user input message stored in a variable
                function ok() {
                    console.log("Message sent!");
@@ -148,7 +148,8 @@ $(document).ready(function () {
         $(document).on("click",".btn-remove",function(){
             
             var key = $(this).attr("data-key");
-            console.log(key);
+
+
             $(this).parent().parent().remove();
             var dbRef = database.ref(key);
             console.log(dbRef); 
