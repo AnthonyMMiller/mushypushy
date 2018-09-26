@@ -44,7 +44,7 @@ $(document).ready(function () {
         event.preventDefault();
           // THIS IS THE MOMENT.JS CODE
         //Console log form validation 
-        console.log($("#main_form").valid())
+       // console.log($("#main_form").valid());
       // this would take the value from user input on form for date of event
       var eventDate = $("#date").val().trim();
       console.log(eventDate);
