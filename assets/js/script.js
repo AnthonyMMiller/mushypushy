@@ -2,8 +2,8 @@ $(document).ready(function () {
    
     // Twilio module
     var TwilioSMS = (function ($) {
-        var accountSid = 'AC9687ac728e15764dabb7d44361d8f722';
-        var authToken = 'f851ee33ba0e520694196f328948ffda';
+        var accountSid = 'ACe70d929fd6bb14f0e85eb6c180e73c80';
+        var authToken = '2d51f4cef7c30e1f0cbbd955de443a7f';
         var testEndpoint = 'https://api.twilio.com/2010-04-01/Accounts/' + accountSid + '/SMS/Messages.json';
         var liveEndpoint = 'https://api.twilio.com/2010-04-01/Accounts/' + accountSid + '/Messages.json';
         var sendMessage = function (to, from, body, successCallback, failCallback) {
@@ -68,7 +68,8 @@ $(document).ready(function () {
                recepientNumber, // going to be user input number stored in a variable
                
                
-               '+14804051263', // Twilio allowed test number
+               '+17027932751', // Twilio allowed test number
+               // 14804051263 other test number if need be
                userMessage, // going to be a user input message stored in a variable
                function ok() {
                    console.log("Message sent!");
