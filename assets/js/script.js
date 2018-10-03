@@ -2,8 +2,8 @@ $(document).ready(function () {
    
     // Twilio module
     var TwilioSMS = (function ($) {
-        var accountSid = 'ACe70d929fd6bb14f0e85eb6c180e73c80';
-        var authToken = '2d51f4cef7c30e1f0cbbd955de443a7f';
+        var accountSid = 'ACe70d929fd6bb14f0e85eb6c187777777';
+        var authToken = '2d51f4cef7c30e1f0cbbd955d7777777';
         var testEndpoint = 'https://api.twilio.com/2010-04-01/Accounts/' + accountSid + '/SMS/Messages.json';
         var liveEndpoint = 'https://api.twilio.com/2010-04-01/Accounts/' + accountSid + '/Messages.json';
         var sendMessage = function (to, from, body, successCallback, failCallback) {
